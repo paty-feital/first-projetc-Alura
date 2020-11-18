@@ -1,0 +1,28 @@
+<ul class="lista">
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+</ul>
+
+<input id="campo"><button id="botao">Adiciona</button>
+
+<script>
+
+    var lista = document.querySelector('ul');
+
+        lista.addEventListener('click', function() {
+
+            alert(event.target.textContent);
+        });
+
+    var botao = document.querySelector('#botao');
+    var input = document.querySelector('#campo');
+    var lista = document.querySelector('.lista');
+
+    botao.addEventListener('click',function() {
+
+        var li = document.createElement('li');
+        li.textContent = input.value;
+        lista.appendChild(li);
+    });
+</script>
